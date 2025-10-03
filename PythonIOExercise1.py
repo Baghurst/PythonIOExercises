@@ -75,9 +75,19 @@ elif options == 3:
     for line in io3:
         print(line)
     io3.close()
-    
+  
 #110
+ioList = []
 io2= open("Names.txt", "r")
 for line in io2:
-    print(line)
+    ioList.append(line.strip())
 io2.close()
+
+
+nameDel = input("Enter one of those names: ")
+print(ioList)
+
+abc = ioList.index(nameDel)
+print(abc)
+ioList.remove(nameDel)
+print(ioList)
